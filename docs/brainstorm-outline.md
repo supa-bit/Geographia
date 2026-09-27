@@ -91,8 +91,8 @@ This is a working outline for brainstorming sessions. Each section lists ideas t
 - Antarctica and uninhabited territories
 - Reference list: ISO 3166-1 (249 codes) as a baseline, with extensions
 - **Open questions**
-  - What counts as evidence of majority support: a referendum only, or polls too? How recent,
-    and what happens when support falls below 50%?
+  - Confirm the numbers in the evidence standard (4.2): 50% minimum turnout, and how many polls
+    over how many years make tier 2?
   - Include subnational units (states, provinces) in v1 or later?
 
 ### 4.2 Statehood Policy
@@ -105,6 +105,43 @@ This is a working outline for brainstorming sessions. Each section lists ideas t
   who claims the territory.
 - The profile cites the evidence of majority support, such as a referendum result or a
   representative poll, with its date.
+
+#### Evidence Standard
+A free, fair and recent referendum is the strongest evidence; consistent polling is a weaker
+second tier, labeled as such. Party votes and declarations never count on their own.
+
+| Tier | Evidence | Shown as country? | Profile label |
+|---|---|---|---|
+| 1 | Referendum that passes every quality test below | Yes | Majority support (referendum, year) |
+| 2 | Several reputable, independent polls showing a majority over several years, with a plain "do you want independence?" question | Yes | Majority support (polling) |
+| 3 | Votes for pro-independence parties | Only as support for tier 1 or 2 | — |
+| Not evidence | Declarations by governments, leaders or armed groups; protest size | No | — |
+
+A referendum counts as tier 1 only if it is:
+
+1. **Free and fair:** independent observers, no military occupation, no coercion.
+2. **Boycott-proof:** turnout of at least 50% of registered voters, so a boycott cannot decide it.
+3. **Clear:** a plain question with a real independence option.
+4. **Current:** the latest valid vote wins; a later valid "no" overrides an earlier "yes".
+
+**Whose majority:** where displaced people, refugees, settlers or boundary lines are contested,
+the profile shows the dispute openly instead of picking an answer. Western Sahara's referendum
+has stalled since 1991 largely over who belongs on the voter roll.
+
+#### Test Cases
+Figures are approximate, from memory, and must be verified before they go into the app.
+
+| Case | Result | Passes the standard? | Outcome under the policy |
+|---|---|---|---|
+| Bougainville 2019 | ~98% yes | Yes | Shown as a country (not yet independent) |
+| South Sudan 2011 | ~99% yes | Yes | Country (independent since 2011) |
+| Montenegro 2006 | ~55.5% yes | Yes | Country (independent since 2006) |
+| Scotland 2014 | ~55% no | Yes | Not shown as a country |
+| Quebec 1995 | ~50.6% no | Yes | Not shown as a country |
+| New Caledonia 2021 | ~96% no, turnout ~44% | No: independence side boycotted | Earlier valid votes (2018, 2020) were no |
+| Catalonia 2017 | ~90% yes, turnout ~43% | No: turnout below 50%, unionists boycotted | Needs tier 2 polling evidence |
+| Crimea 2014 | ~97% yes (official) | No: held under military occupation | Not evidence |
+| Greenland (polls) | Majority yes in principle; falls if living standards drop | Depends on the question's wording | Tier 2 review |
 
 ### 4.3 Profile Sections (draft data model)
 - **Identity:** official & common names, native names, flag, coat of arms, anthem, motto
@@ -255,7 +292,7 @@ This is a working outline for brainstorming sessions. Each section lists ideas t
 ## 15. Next Steps
 
 - [ ] Pick the primary audience and the MVP feature set
-- [ ] Set the evidence rules for the statehood policy and draw up the first list of places it covers
+- [ ] Verify the test-case figures and draw up the first list of places the statehood policy covers
 - [ ] Audit data sources and licenses; choose the baseline datasets
 - [ ] Prototype the globe with two candidate rendering stacks
 - [ ] Draft the country profile schema and fill 5 sample countries end-to-end
