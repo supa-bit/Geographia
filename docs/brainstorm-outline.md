@@ -223,10 +223,10 @@ Figures are approximate, from memory, and must be verified before they go into t
 
 ## 9. Technical Architecture (options to compare)
 
-- **Desktop shell:** Tauri (small, Rust) vs. Electron (mature, heavier) vs. native
-  (Qt, .NET MAUI, SwiftUI) vs. Flutter desktop
-- **Map rendering:** MapLibre GL (2D/vector), CesiumJS (3D globe), deck.gl (data layers),
-  or a custom WebGL/three.js globe
+- **Language & framework (C family or Python):** C# with Godot 4 (game engine) vs. C++ with
+  Qt 6 vs. Python with PySide6 vs. C# with Avalonia
+- **Map rendering:** globe drawn in Godot from Natural Earth shapes, MapLibre Native (C++/Qt),
+  or Mapsui (C#, flat 2D)
 - **Data storage:** SQLite for facts and progress; PMTiles/MBTiles for offline vector tiles
 - **Content format:** Markdown/MDX articles + structured JSON/YAML per country
 - **Data pipeline:** scripts that fetch, clean, merge and version data into a release bundle
