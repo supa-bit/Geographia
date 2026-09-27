@@ -87,7 +87,7 @@ This is a working outline for brainstorming sessions. Each section lists ideas t
 - 193 UN member states + 2 observer states
 - Dependent territories, overseas regions, Crown dependencies
 - Partially recognized states, disputed areas, and places where most people want independence
-  (shown as countries — see Statehood Policy below)
+  (shown as countries — see 4.2 Statehood Policy)
 - Antarctica and uninhabited territories
 - Reference list: ISO 3166-1 (249 codes) as a baseline, with extensions
 - **Open questions**
@@ -95,7 +95,7 @@ This is a working outline for brainstorming sessions. Each section lists ideas t
     and what happens when support falls below 50%?
   - Include subnational units (states, provinces) in v1 or later?
 
-### Statehood Policy
+### 4.2 Statehood Policy
 - **Decision:** if a majority of a place's population wants independence, Geographia shows it as
   a country, whether or not other states recognize it. Everyone has the right to
   self-determination.
