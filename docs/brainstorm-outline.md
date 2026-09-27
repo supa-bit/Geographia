@@ -4,7 +4,28 @@ A desktop app for learning the **geography**, **geology** and **history** of the
 rich profile for every country and territory.
 
 This is a working outline for brainstorming sessions. Each section lists ideas to explore and
-**open questions** to settle. Nothing here is decided yet.
+**open questions** to settle. Decisions made so far are listed below; open ones are tracked in the
+[Geographia Ledger](https://claude.ai/artifact/B6zf4ePMEqxUTxjNphP2k9).
+
+## Decisions Made (27 September 2026)
+
+| Decision | Answer |
+|---|---|
+| Atlas or learning app | Learning app built on an atlas |
+| What to learn first | Countries and territories |
+| Language and framework | C# with Godot 4 |
+| Globe or flat map | Both from the start, switchable |
+| Visual identity | Low-poly, 2000s Frutiger Aero-style interface, with a high-quality map |
+| Install size | One full offline bundle |
+| More than one computer | A proper sync service |
+| Content updates | Every quarter, plus urgent fixes |
+| Who writes the articles | AI drafts from cited sources, plus your own notes |
+| States and provinces | Later (expansion phase) |
+| Referendum turnout | At least 51% of registered voters |
+| Polling (tier 2) | At least 3 polls by different pollsters over 2+ years |
+| How long a referendum counts | Until a later valid vote |
+| Disputed borders | Dashed line, every claim shown |
+| Contested history | Several perspectives, each sourced |
 
 ---
 
@@ -105,14 +126,14 @@ second tier, labeled as such. Party votes and declarations never count on their 
 | Tier | Evidence | Shown as country? | Profile label |
 |---|---|---|---|
 | 1 | Referendum that passes every quality test below | Yes | Majority support (referendum, year) |
-| 2 | Several reputable, independent polls showing a majority over several years, with a plain "do you want independence?" question | Yes | Majority support (polling) |
+| 2 | At least 3 polls by different pollsters, all showing a majority, over 2+ years, with a plain "do you want independence?" question | Yes | Majority support (polling) |
 | 3 | Votes for pro-independence parties | Only as support for tier 1 or 2 | — |
 | Not evidence | Declarations by governments, leaders or armed groups; protest size | No | — |
 
 A referendum counts as tier 1 only if it is:
 
 1. **Free and fair:** independent observers, no military occupation, no coercion.
-2. **Boycott-proof:** turnout of at least 50% of registered voters, so a boycott cannot decide it.
+2. **Boycott-proof:** turnout of at least 51% of registered voters, so a boycott cannot decide it.
 3. **Clear:** a plain question with a real independence option.
 4. **Current:** the latest valid vote wins; a later valid "no" overrides an earlier "yes".
 
@@ -223,18 +244,15 @@ Figures are approximate, from memory, and must be verified before they go into t
 
 ## 9. Technical Architecture (options to compare)
 
-- **Language & framework (C family or Python):** C# with Godot 4 (game engine) vs. C++ with
-  Qt 6 vs. Python with PySide6 vs. C# with Avalonia
-- **Map rendering:** globe drawn in Godot from Natural Earth shapes, MapLibre Native (C++/Qt),
-  or Mapsui (C#, flat 2D)
+- **Language & framework (decided):** C# with Godot 4
+- **Map rendering (decided):** globe and flat map, switchable, drawn in Godot from Natural Earth shapes
 - **Data storage:** SQLite for facts and progress; PMTiles/MBTiles for offline vector tiles
 - **Content format:** Markdown/MDX articles + structured JSON/YAML per country
 - **Data pipeline:** scripts that fetch, clean, merge and version data into a release bundle
-- **Updates:** app auto-update + separate delta content packs
+- **Updates:** content packs every quarter, plus urgent fixes
 - **Platforms:** Windows, macOS, Linux (tablet/web later?)
-- **Open questions**
-  - Install size budget (full offline globe can be several GB — tiered downloads?)
-  - One computer only, or sync progress between your own computers?
+- **Decided:** one full offline bundle; a proper sync service between your computers (how and
+  when is an open decision in the ledger)
 
 ## 10. Business & Distribution
 
