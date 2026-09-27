@@ -24,20 +24,12 @@ This is a working outline for brainstorming sessions. Each section lists ideas t
 - **Open questions**
   - Is this primarily a *reference atlas with learning features* or a *learning app with a
     reference atlas*?
-  - What is the one feature that makes someone choose this over Google Earth, Wikipedia or
-    Seterra?
+  - Which part do you want to learn first: countries, geology, history, or how they connect?
 
-## 2. Target Audiences
+## 2. Audience
 
-| Audience | Needs | Implications |
-|---|---|---|
-| Students (middle school → university) | Curriculum-aligned facts, exam prep | Quizzes, lesson paths, printable sheets |
-| Teachers | Classroom demos, assignments | Presenter mode, shareable lesson sets |
-| Lifelong learners / trivia fans | Curiosity, challenge | Games, streaks, deep-dive articles |
-| Travelers | Country briefings | Quick-facts cards, culture & practical info |
-| Home-schooling families | Structured, safe content | Guided courses, parental progress view |
-
-- **Open questions:** Which *one* audience defines the MVP? Age range and reading level?
+Geographia is a personal app with one user: you. Features for other people, such as classroom
+tools, accounts, multiplayer and selling it, are out of scope unless that changes.
 
 ## 3. Knowledge Domains
 
@@ -172,7 +164,7 @@ Figures are approximate, from memory, and must be verified before they go into t
 - Toggleable layers: political, physical/relief, tectonic plates, geology, climate, biomes,
   population density, historical borders, trade routes
 - Label density controls; hover tooltips; click-through to profiles
-- Measure distance and area; draw/annotate (for teachers)
+- Measure distance and area; draw/annotate for your own notes
 
 ### 5.2 Timeline
 - Unified time slider spanning geologic time → human history → present
@@ -194,12 +186,10 @@ Figures are approximate, from memory, and must be verified before they go into t
 - **Guided courses:** "Countries of Africa", "Rocks & Plates 101", "Empires of the Ancient World"
 - **Quiz types:** click-the-map, flags, capitals, outlines, multiple choice, timeline ordering,
   "which is bigger", rock/feature identification
-- **Spaced repetition** for facts the learner gets wrong
+- **Spaced repetition** for facts you get wrong
 - **Progress tracking:** mastery per region/topic; "fog of war" map that reveals as you learn
-- **Gamification:** streaks, achievements, passport stamps, collections
-- **Difficulty levels** and age-appropriate modes
-- **Teacher tools:** custom quiz builder, class codes, export results (later phase)
-- **Open questions:** Single-player only, or local multiplayer / classroom competitions?
+- **Motivation:** streaks, achievements, passport stamps, collections
+- **Difficulty levels** you can raise as you improve
 
 ## 7. UX & Design
 
@@ -226,8 +216,9 @@ Figures are approximate, from memory, and must be verified before they go into t
 | Flags & symbols | Wikimedia Commons (check per-file licenses) |
 
 - **Open questions**
-  - Licensing compatibility (CC BY-SA share-alike vs. commercial distribution)
-  - Editorial process: who writes/reviews articles? AI-assisted drafting + human review?
+  - Licenses don't limit personal use; still record each source's license in case you ever
+    share the app
+  - Who writes the articles? AI drafts from cited sources, your own notes, or both?
   - Update cadence and how updates ship to offline users
 
 ## 9. Technical Architecture (options to compare)
@@ -243,55 +234,51 @@ Figures are approximate, from memory, and must be verified before they go into t
 - **Platforms:** Windows, macOS, Linux (tablet/web later?)
 - **Open questions**
   - Install size budget (full offline globe can be several GB — tiered downloads?)
-  - Any cloud features (sync, accounts) or strictly local?
+  - One computer only, or sync progress between your own computers?
 
 ## 10. Business & Distribution
 
-- Models: one-time purchase, freemium with paid course packs, free/open-source,
-  education licenses
-- Channels: direct download, Microsoft Store, Mac App Store, Steam, school procurement
-- **Open question:** Open-source the data pipeline and content to build a contributor community?
+Not applicable: Geographia is a personal app. Pricing, stores and open-source only come up if
+you decide to share it later.
 
 ## 11. Phased Roadmap (draft)
 
 1. **Prototype** — interactive globe, political layer, 250 country quick-fact cards, search
-2. **MVP** — full country profiles, physical layer, flags/capitals/map quizzes, progress
+2. **First version** — full country profiles, physical layer, flags/capitals/map quizzes, progress
    tracking, offline mode
 3. **Geology release** — tectonic & geology layers, geologic timeline, formation stories
 4. **History release** — historical borders slider, empires, per-country timelines
 5. **Learning depth** — guided courses, spaced repetition, achievements
-6. **Classroom** — teacher tools, presenter mode, class progress
-7. **Expansion** — subnational regions, localization, community content
+6. **Expansion** — subnational regions, more layers and journeys
 
 ## 12. Risks & Challenges
 
 - Political sensitivity: disputed territories, names and historical narratives
 - Data accuracy and staleness; conflicting sources
-- Licensing constraints on maps, images and text
+- Licensing, only if you ever share the app
 - Scope creep — three huge domains at once
 - Performance of 3D globe with many layers on older hardware
 - Content production cost (writing, illustration, fact-checking)
 
-## 13. Success Metrics
+## 13. How You'll Know It Works
 
-- Learning: quiz mastery gains, retention over 30/90 days
-- Engagement: sessions per week, courses completed, streak length
-- Content: coverage completeness per country, source freshness
-- Quality: crash-free sessions, startup time, reported data errors
+- You remember more: quiz scores and retention after 30 and 90 days
+- You keep coming back: sessions per week, courses finished
+- The data stays right: coverage per country, source freshness, errors you spot
+- It runs well: fast startup, no crashes
 
 ## 14. Brainstorming Session Prompts
 
-- If a user opens the app for 5 minutes, what should they walk away knowing?
+- After 5 minutes in the app, what do you want to walk away knowing?
 - What does the *perfect* country page look like? Sketch it.
 - Which three "journeys" best showcase geography + geology + history together?
-- What would make a teacher recommend this to their whole class?
-- What should we deliberately leave out of v1?
+- What should be deliberately left out of the first version?
 - How do we make rocks and plate tectonics as exciting as flags and capitals?
 - How should the app behave when facts are disputed or uncertain?
 
 ## 15. Next Steps
 
-- [ ] Pick the primary audience and the MVP feature set
+- [ ] Pick the first-version feature set
 - [ ] Verify the test-case figures and draw up the first list of places the statehood policy covers
 - [ ] Audit data sources and licenses; choose the baseline datasets
 - [ ] Prototype the globe with two candidate rendering stacks
