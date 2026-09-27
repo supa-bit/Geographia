@@ -86,14 +86,27 @@ This is a working outline for brainstorming sessions. Each section lists ideas t
 ### 4.1 Scope of Entities
 - 193 UN member states + 2 observer states
 - Dependent territories, overseas regions, Crown dependencies
-- Partially recognized states and disputed areas
+- Partially recognized states, disputed areas, and places where most people want independence
+  (shown as countries — see Statehood Policy below)
 - Antarctica and uninhabited territories
 - Reference list: ISO 3166-1 (249 codes) as a baseline, with extensions
 - **Open questions**
-  - Policy for disputed borders and names (show multiple claims? user-selectable viewpoint?)
+  - What counts as evidence of majority support: a referendum only, or polls too? How recent,
+    and what happens when support falls below 50%?
   - Include subnational units (states, provinces) in v1 or later?
 
-### 4.2 Profile Sections (draft data model)
+### Statehood Policy
+- **Decision:** if a majority of a place's population wants independence, Geographia shows it as
+  a country, whether or not other states recognize it. Everyone has the right to
+  self-determination.
+- The place gets a full country profile, its own color on the political map, and a place in
+  country quizzes and rankings.
+- Each profile states its recognition status plainly: which states or bodies recognize it, and
+  who claims the territory.
+- The profile cites the evidence of majority support, such as a referendum result or a
+  representative poll, with its date.
+
+### 4.3 Profile Sections (draft data model)
 - **Identity:** official & common names, native names, flag, coat of arms, anthem, motto
 - **Codes:** ISO alpha-2/alpha-3/numeric, calling code, internet TLD, currency code
 - **Location:** continent, region (UN M49), coordinates, borders/neighbors, coastline length
@@ -109,7 +122,7 @@ This is a working outline for brainstorming sessions. Each section lists ideas t
 - **Media:** photos, maps, audio pronunciation of names
 - **Sources & last-updated date** on every data field
 
-### 4.3 Profile Features
+### 4.4 Profile Features
 - Side-by-side country comparison
 - "Similar countries" and "Neighbors" navigation
 - Rankings (largest, most populous, highest…) with map highlighting
@@ -242,7 +255,7 @@ This is a working outline for brainstorming sessions. Each section lists ideas t
 ## 15. Next Steps
 
 - [ ] Pick the primary audience and the MVP feature set
-- [ ] Decide the disputed-territory and naming policy
+- [ ] Set the evidence rules for the statehood policy and draw up the first list of places it covers
 - [ ] Audit data sources and licenses; choose the baseline datasets
 - [ ] Prototype the globe with two candidate rendering stacks
 - [ ] Draft the country profile schema and fill 5 sample countries end-to-end
